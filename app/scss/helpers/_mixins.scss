@@ -1,0 +1,51 @@
+/*-----------------------------------------------*/
+/* Mixins
+/*-----------------------------------------------*/
+//font awesome icon
+@mixin faIcon ($iconWrapWidth, $iconWrapHeight, $iconWrapBorderRadius, $iconSize, $iconColor){
+  display: inline-block;
+  width: $iconWrapWidth;
+  height: $iconWrapHeight;
+  margin-right: 5px;
+  text-align: center;
+  color: $iconColor;
+  border: 1px solid $iconColor;
+  border-radius: $iconWrapBorderRadius;
+  transition: all .25s linear;
+  &:last-child{
+    margin-right: 0px;
+  }
+  i{
+    line-height: $iconWrapHeight;
+    vertical-align: top;
+    font-size: $iconSize;
+  }
+}
+
+// clearing of ul, ol
+@mixin listClear(){
+  margin: 0;
+  padding: 0;  
+  list-style-type: none;
+}
+
+//fadeIn
+/* 
+@mixin fadeIn($duration, $delay){
+  animation-timing-function: linear;
+  animation-name: fadeIn;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  opacity: 0;
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+}
+
+ */
+

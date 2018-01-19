@@ -1,0 +1,22 @@
+/*-------------------------------------*/
+/* Styles
+/*-------------------------------------*/
+//partials
+@import "../../node_modules/normalize-scss/sass/normalize";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.min";
+
+//helpers
+@import "helpers/variables";
+@import "helpers/grid";
+@import "helpers/mixins";
+@import "helpers/layout";
+
+//template
+@import "template/section";
+@import "template/header";
+@import "template/footer";
+
+//components
+@import "components/navbar";
+@import "components/owl-carousel";

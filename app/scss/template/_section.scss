@@ -1,0 +1,209 @@
+/*-------------------------------------*/
+/* section - universal content block
+/*-------------------------------------*/
+.section{
+  position: relative;
+  padding: 28px 0;
+  &_fullsize-bg{
+    position: relative;
+    width: 100%;    
+    background-position: 75%;
+    background-size: cover;
+    background-image: url(../images/header-bg-2x.jpg);
+  }
+  &_paralax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &_bg-overlay:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.25);
+  }
+  &_ligh-grey{
+    background: #f3f5f8;
+  }
+  &__title-wrap{
+    margin-bottom: 40px;
+  }
+  &__title{  
+    position: relative;
+    width: 205px;
+    padding-bottom: 36px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-primary;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 15px;
+      display: block;
+      width: 150px;
+      height: 8px;
+      background: url(../images/h1-bg.png) no-repeat center;
+      background-size: 150px 8px;
+    }
+  }
+  &__content{
+    margin: 0 auto;
+    font-size: .875rem;
+    &_text-grey{
+      color: #adafb2;
+    }
+  }
+
+  @media (min-width: 768px){
+    padding: 55px 0;
+    &_fullsize-bg{
+      background-position: 50%;
+    }
+    .container,
+    .row{
+      height: 100%;
+    }
+    &__title{
+      width: auto;
+      padding-bottom: 88px;
+      font-size: 1rem;
+      &:after{
+        bottom: 60px;
+        width: 236px;
+        height: 13px;
+        background-size: 236px 13px;
+      }
+    }
+    &__subtitle{
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+  }
+  @media (min-width: 1024px){
+    padding: 105px 0;
+    &__content{
+      max-width: 755px;
+      &_big{
+        font-size: 1.125rem;
+        line-height: 1.4;
+      }
+      &_medium{
+        font-size: 1rem;
+        line-height: 1.56;
+      }
+    }
+  }
+}
+
+
+/* Two Column Section */
+.double-col{
+  padding: 0;
+  &__container{
+    padding: 0;
+    width: 100%;
+  }
+  &__image{
+    overflow: hidden;
+    height: 220px;
+    background: #f3f5f8;
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: 75%;
+      background-size: cover;
+      background-image: url(../images/iphone-bg.png);
+    }
+  }
+  @media (min-width: 1024px){
+    &__container{
+      height: 650px;
+    }
+    &__image,
+    &__content{
+      float: left;
+      width: 50%;
+      height: 100%;
+      padding: 0;
+    }
+    &__image{ 
+      &:before{
+        background-position: 50%;
+      }
+    }
+  }
+}
+
+/* Slogan Block - for background image section */
+.slogan{
+  &__title{
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    &_medium{
+      font-size: 0.875rem;
+    }
+  }
+  &__subtitle{
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__btn{
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 132px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto 55px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255, 0.5);
+    background: transparent;    
+    box-shadow: 0px 0px 15px 0 rgba(0,0,0,.3);
+    color: #fff;
+    font-size: 0.7rem;
+    text-transform: uppercase; 
+    text-decoration: none;   
+  }
+  @media (min-width: 768px){
+    &__title{
+      margin-bottom: 26px;
+      font-size: 1.625rem;
+      &_medium{
+        margin-bottom: 41px;
+        font-size: 1.125rem;
+      }
+    }
+    &__subtitle{
+      font-size: 1.375rem;
+    }
+    &__btn{
+      width: 192px;
+      height: 65px;
+      margin-bottom: 75px;
+      line-height: 65px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
